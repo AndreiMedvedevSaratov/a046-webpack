@@ -7,10 +7,16 @@ import avatarJpg from '@/assets/avatar.jpg';
 import Calendar from '@/assets/calendar.svg';
 import Image from '@/assets/app-image.svg';
 
+// Tree Shaking
+function TODO(a: number) {
+  console.log('TODOFUNCTION');
+}
+
 export const App = () => {
   const [count, setCount] = useState<number>(0);
 
   const increment = () => setCount(prev => prev + 1);
+  TODO(51234);
 
   if (__PLATFORM__ === 'desktop') {
     return <div>ISDESKTOPPLATFORM</div>
