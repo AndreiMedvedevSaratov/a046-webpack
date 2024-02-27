@@ -8,15 +8,21 @@ import Calendar from '@/assets/calendar.svg';
 import Image from '@/assets/app-image.svg';
 
 // Tree Shaking
-function TODO(a: number) {
-  console.log('TODOFUNCTION');
+function TODO() {
+  TODO2()
+}
+
+function TODO2() {
+  // throw new Error();
 }
 
 export const App = () => {
   const [count, setCount] = useState<number>(0);
 
-  const increment = () => setCount(prev => prev + 1);
-  // TODO(51234);
+  const increment = () => {
+    setCount(prev => prev + 1);
+    TODO();
+  }
 
   // if (__PLATFORM__ === 'desktop') {
   //   return <div>ISDESKTOPPLATFORM</div>
